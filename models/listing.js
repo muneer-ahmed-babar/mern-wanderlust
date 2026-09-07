@@ -8,11 +8,15 @@ const listingSchema = new Schema({
   },
   description: String,
   image: {
-    type: String,
-    default: "https://unsplash.com/photos/a-mountain-goat-with-long-horns-standing-in-a-field--6UZhQ0m4gQ",
-    set: (v) => v === "" ? 
-    "https://unsplash.com/photos/a-mountain-goat-with-long-horns-standing-in-a-field--6UZhQ0m4gQ" 
-    : v,
+    filename: {
+      type: String,
+      default: "listingimage",
+    },
+    url: {
+      type: String,
+      default:
+        "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=60",
+    },
   },
   price: Number,
   location: String,
@@ -20,4 +24,5 @@ const listingSchema = new Schema({
 });
 
 const Listing = mongoose.model("Listing", listingSchema);
+
 module.exports = Listing;
