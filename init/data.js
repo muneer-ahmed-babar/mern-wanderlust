@@ -48,18 +48,6 @@ const sampleListings = [
     country: "Italy",
   },
   {
-    title: "Secluded Treehouse Getaway",
-    description:
-      "Live among the treetops in this unique treehouse retreat. A true nature lover's paradise.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 800,
-    location: "Portland",
-    country: "United States",
-  },
-  {
     title: "Beachfront Paradise",
     description:
       "Step out of your door onto the sandy beach. This beachfront condo offers the ultimate relaxation.",
@@ -72,18 +60,6 @@ const sampleListings = [
     country: "Mexico",
   },
   {
-    title: "Rustic Cabin by the Lake",
-    description:
-      "Spend your days fishing and kayaking on the serene lake. This cozy cabin is perfect for outdoor enthusiasts.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 900,
-    location: "Lake Tahoe",
-    country: "United States",
-  },
-  {
     title: "Luxury Penthouse with City Views",
     description:
       "Indulge in luxury living with panoramic city views from this stunning penthouse apartment.",
@@ -94,18 +70,6 @@ const sampleListings = [
     price: 3500,
     location: "Los Angeles",
     country: "United States",
-  },
-  {
-    title: "Ski-In/Ski-Out Chalet",
-    description:
-      "Hit the slopes right from your doorstep in this ski-in/ski-out chalet in the Swiss Alps.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1502784444187-359ac186c5bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 3000,
-    location: "Verbier",
-    country: "Switzerland",
   },
   {
     title: "Safari Lodge in the Serengeti",
