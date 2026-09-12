@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Hello, <%= name %></h1>
 
-    <% if (msg && msg.length > 0) { %>
-      <p><%= msg[0] %></p>
-    <% } %>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <%= successMsg %> <%= errorMsg %>
+  <h1>Hello, <%= name %></h1> -->
+
+  <% if (successMsg && successMsg.length > 0) { %>
+    <div style="background: #d4edda; color: #155724; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+      <%= successMsg %>
+    </div>
+  <% } %>
+
+  <% if (errorMsg && errorMsg.length > 0) { %>
+    <div style="background: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+      <%= errorMsg %>
+    </div>
+  <% } %>
+
+  <h1>Hello, <%= name %></h1>
+</body>
+
 </html>
