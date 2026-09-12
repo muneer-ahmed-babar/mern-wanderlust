@@ -28,6 +28,10 @@ const listingSchema = new Schema({
       ref: "Review",
     },
   ],
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+  },
 });
 
 // Cascade delete: when a listing is deleted, also delete all its linked reviews

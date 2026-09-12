@@ -6,8 +6,6 @@ const { reviewSchema } = require("../schema.js");
 const Review = require("../models/review.js");
 const Listing = require("../models/listing.js");
 
-// Joi validation middleware
-// checks req.body against reviewSchema
 const validateReview = (req, res, next) => {
   let { error } = reviewSchema.validate(req.body);
   if (error) {
@@ -18,7 +16,6 @@ const validateReview = (req, res, next) => {
   }
 };
 
-// Reviews - Post Route
 router.post(
   "/",
   validateReview,
@@ -37,16 +34,12 @@ router.post(
   })
 );
 
-// Reviews - Delete Route
 router.delete(
   "/:reviewId",
   wrapAsync(async (req, res) => {
     let { id, reviewId } = req.params;
 
-    // remove the review's ID from the listing's reviews array
     await Listing.findByIdAndUpdate(id, { $pull: { reviews: reviewId } });
-
-    // delete the actual review document
     await Review.findByIdAndDelete(reviewId);
 
     req.flash("success", "Review Deleted!");
