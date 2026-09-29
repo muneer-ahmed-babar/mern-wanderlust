@@ -25,6 +25,17 @@ const listingSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "User",
   },
+  geometry: {
+    type: {
+      type: String, 
+      enum: ["Point"], 
+      required: true,
+    },
+    coordinates: {
+      type: [Number], // [longitude, latitude]
+      required: true,
+    },
+  },
 });
 
 // Cascade delete: when a listing is deleted, also delete all its linked reviews

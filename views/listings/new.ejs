@@ -25,12 +25,9 @@
       </div>
       <div class="mb-3">
         <label for="imageFile" class="form-label">Upload Listing Image</label>
-        <input
-          id="imageFile"
-          name="image"
-          type="file"
-          class="form-control"
-        />
+        <input id="imageFile" name="image" type="file" class="form-control" required />
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please upload an image.</div>
       </div>
       <div class="row">
         <div class="col-md-4 mb-3">
@@ -40,6 +37,7 @@
             name="listing[price]"
             placeholder="Add a price"
             type="number"
+            min="0"
             class="form-control"
             required
           />
